@@ -1,0 +1,40 @@
+//EJER 1
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+#include <string>
+
+using namespace std;
+
+//funciones
+double Exp(double x)
+{
+	double exp = 900 + (x / 100) * 900;
+	return exp;
+}
+
+double Exp1(double y)
+{
+	double exp1 = 1000 + (y / 100) * 900;
+	return exp1;
+}
+
+int main()
+{
+	//entrada
+	int años;
+	char nac;
+	double sueldo;
+	double sueldoah;
+	//logica
+	printf("Ingrese sus anios de experiencia:\n");
+	cin >> años;
+	printf("¿Usted nacio en Lima?: Si= L(l) o No= F(f)\n");
+	cin >> nac;
+	sueldo = (5 >= años >= 1)*Exp(años) + (años > 5)*Exp1(años);//SIN BONO
+	sueldoah = (nac == 'L' || nac == 'l') *sueldo*1.15 + (nac == 'F' || nac == 'f')*sueldo*1.2;//CON BONO
+	printf("Su sueldo sera de:\n");
+	cout << sueldoah << " soles." << endl;
+
+	_getch();
+  }
