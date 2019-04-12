@@ -1,0 +1,32 @@
+//EJER 2
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+	//ENTRADA
+	long long num;
+
+	//LOGICA
+	cout << "Ingrese codigo de barras: ";
+	cin >> num;
+	cout << "Dia de vencimiento: ";
+	cout << (num % 1000000000000) / 10000000000 << endl;
+	cout << "Mes de vencimiento: ";
+	cout << (num % 10000000000) / 100000000 << endl;
+	cout << "Año de vencimiento: ";
+	cout << (num % 100000000) / 10000 << endl;
+	cout << "Tipo de producto: ";
+	cout << char((num % 10000) / 100) << endl;//ascii
+	cout << "Producto perecible (0:No; 1:Si): ";
+	int perecible = num % 100;
+	bool perecible1;
+	perecible1 = (perecible > 0) * 1 + (perecible == 0) * 0;
+  
+  //SALIDA
+	cout << perecible1;
+	_getch();
+}
