@@ -1,0 +1,24 @@
+Algoritmo Ejer3Simulacro
+	Escribir "Ingrese su peso kg:"
+	Leer p
+	Escribir "Ingrese su altura en m"
+	Leer a
+	IMC <- P/(a^2)
+	Escribir "Su IMC es:" IMC " kg/m^2"
+	Si IMC <15 entonces
+		escribir "Requiere ingreso urgente al hospital"
+	FinSi
+	Si IMC>=15 Y IMC <=20 Entonces
+		escribir "Usted posee bajo peso"
+	FinSi
+	Si IMC>20 Y IMC<=30 Entonces
+		escribir "Usted posee un peso normal (saludable)"
+	FinSi
+	Si IMC > 30 Y IMC <=40 Entonces
+		escribir " Usted posee sobrepeso (obesidad de grado I)"
+	FinSi
+	Si IMC >40 Entonces
+		escribir "Usted posee sobrepeso crónico (obesidad de grado II)"
+	FinSi
+	
+FinAlgoritmo
